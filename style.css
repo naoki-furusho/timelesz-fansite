@@ -620,6 +620,37 @@ a:hover { opacity: 0.8; }
 .live-meta-item span:last-child { font-size: 0.9rem; color: var(--text-secondary); }
 .live-note { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; }
 
+.live-schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 4px;
+}
+.live-schedule-item {
+  background: rgba(126, 207, 237, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.live-schedule-date {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.live-schedule-venue {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .live-schedule-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ===== メンバー ===== */
 .members-grid {
   display: grid;
